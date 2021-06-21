@@ -33,14 +33,14 @@ class _RecipesHomePageState extends State<RecipesHomePage> {
           child: ListView.builder(
             itemCount: muestras.length,
             itemBuilder: (BuildContext context, int index) {
-              return widgetRecipeCard(muestras[index]);
+              return widgetRecipeCard(context, muestras[index]);
             },
           ),
         ));
   }
 }
 
-Widget widgetRecipeCard(Recipe recipe) {
+Widget widgetRecipeCard(BuildContext context, Recipe recipe) {
   return Card(
     child: Column(
       children: <Widget>[
