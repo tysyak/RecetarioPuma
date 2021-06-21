@@ -6,4 +6,13 @@ class Recipe {
 
   Recipe(this.id, this.title, this.imageRecipe,
       [this.ingredientes = const ['Sin Ingredientes']]);
+
+  String printMenu() {
+    String receta = '';
+    this.ingredientes.forEach((element) {
+      receta += '	•' + element + '\n';
+    });
+
+    return receta;
+  }
 }
