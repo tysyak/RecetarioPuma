@@ -3,9 +3,7 @@ import 'package:recetario/Pages/RecipesHomePage.dart';
 
 import 'Utilities/Colors.dart';
 
-main() {
-  runApp(RecetarioPuma());
-}
+void main() => runApp(RecetarioPuma());
 
 class RecetarioPuma extends StatelessWidget {
   const RecetarioPuma({Key? key}) : super(key: key);
