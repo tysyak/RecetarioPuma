@@ -10,11 +10,17 @@ class RecipesHomePage extends StatefulWidget {
 
 class _RecipesHomePageState extends State<RecipesHomePage> {
   static List<Recipe> muestras = [
-    Recipe("Mole con pollo", "assets/images/comida1.jpeg"),
-    Recipe("Chilaquiles", "assets/images/comida2.jpeg"),
-    Recipe("Tacos dorados", "assets/images/comida3.jpeg"),
-    Recipe("Maruchan con suadero", "assets/images/comida4.jpeg"),
-    Recipe("Taquitos de canasta", "assets/images/comida5.jpeg")
+    Recipe(1, "Mole con pollo", "assets/images/comida1.jpeg", [
+      "200 mililitros de mole poblano",
+      "2 piernas de pollo",
+      "2 muslos de pollo",
+      "frijoles refritos de lata",
+    ]),
+    Recipe(2, "Chilaquiles", "assets/images/comida2.jpeg"),
+    Recipe(3, "Tacos dorados", "assets/images/comida3.jpeg"),
+    Recipe(4, "Maruchan con suadero", "assets/images/comida4.jpeg",
+        ["Cancer", "Carne de Dogo", "Awa de uwu"]),
+    Recipe(5, "Taquitos de canasta", "assets/images/comida5.jpeg")
   ];
 
   @override
