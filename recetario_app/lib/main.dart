@@ -11,11 +11,15 @@ class RecetarioPuma extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Recetario Puma',
       theme: ThemeData(
         primaryColor: UNAM_Blue,
         accentColor: UNAM_Gold,
       ),
       home: RecipesHomePage(),
+      routes: {
+        '/detailRecipe': (context, {arguments}) => DetailRecipe(arguments)
+      },
     );
   }
 }
