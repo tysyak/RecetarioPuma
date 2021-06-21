@@ -56,3 +56,28 @@ Widget widgetRecipeCard(BuildContext context, Recipe recipe) {
     ),
   );
 }
+
+class DetailRecipe extends StatelessWidget {
+  // Define una variable requerida y recibe los parámetros pasados
+  final Recipe recipe;
+
+  // Establezca un parámetro predeterminado para el título, de modo que no se pueda pasar ningún valor al saltar a esta interfaz.
+  DetailRecipe(this.recipe);
+
+  @override
+  Widget build(BuildContext context) {
+    /// Scaffold puede generar fácilmente una página de estilo de material
+    return Scaffold(
+        // barra de navegación superior
+        appBar: AppBar(
+          title: Text(recipe.title),
+        ),
+        body: Container(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+              Image.asset(recipe.imageRecipe),
+              Text(recipe.printMenu())
+            ])));
+  }
+}
