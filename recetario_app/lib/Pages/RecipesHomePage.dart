@@ -44,8 +44,14 @@ Widget widgetRecipeCard(BuildContext context, Recipe recipe) {
   return Card(
     child: Column(
       children: <Widget>[
-        Image(image: AssetImage(recipe.imageRecipe)),
-        Text(recipe.title),
+        ListTile(
+          title: Text(recipe.id.toString() + ': ' + recipe.title),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => DetailRecipe(recipe)));
+          },
+        ),
+        Image.asset(recipe.imageRecipe)
       ],
     ),
   );
