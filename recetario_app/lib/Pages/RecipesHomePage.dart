@@ -50,7 +50,7 @@ Widget widgetRecipeCard(BuildContext context, Recipe recipe) {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => DetailRecipe(recipe)));
           },
-          leading: CircleAvatar(backgroundImage: AssetImage(recipe.imageRecipe),),
+          leading: CircleAvatar(backgroundImage: AssetImage(recipe.imageRecipe)),
         ),
       ],
     ),
