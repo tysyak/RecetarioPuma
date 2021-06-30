@@ -76,7 +76,16 @@ class DetailRecipe extends StatelessWidget {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-              Image.asset(recipe.imageRecipe),
+                  SizedBox(
+                     height: 300,
+                     width: double.infinity,
+                     child: Container(
+                       child: Image.asset(
+                         recipe.imageRecipe,
+                         // fit: BoxFit.cover
+                       )
+                     )
+                  ),
               Text(recipe.printMenu())
             ])));
   }
