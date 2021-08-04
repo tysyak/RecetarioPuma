@@ -45,7 +45,21 @@ class _UserListState extends State<UserList> {
     List<Widget> listUsers = [];
 
     for (var item in lista) {
-      listUsers.add(Text(item.first_name));
+      listUsers.add(ListTile(
+          leading: ConstrainedBox(
+              constraints: BoxConstraints(
+                minWidth: 44,
+                minHeight: 44,
+                maxWidth: 64,
+                maxHeight: 64,
+              ),
+              child: Image.network(item.avatar, fit: BoxFit.cover)),
+          title: Text(item.id.toString() +
+              '.- ' +
+              item.first_name +
+              ' ' +
+              item.last_name),
+          subtitle: Text(item.email)));
     }
     return listUsers;
   }

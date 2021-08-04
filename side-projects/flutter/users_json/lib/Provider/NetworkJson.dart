@@ -6,15 +6,12 @@ import 'package:users_json/Models/User.dart';
 Future<List<User>> getUsers() async {
   List<User> users = [];
 
-  var urlString = "http://0.0.0.0:3001/api/users";
-
-  var encodedURI = Uri.parse(urlString);
-  final response = await http.get(encodedURI);
+  final url = Uri.http("AQUI_LA_IP:3001", "/api/users");
+  final response = await http.get(url);
 
   if (response.statusCode != 200) {
     return users;
   }
-
   var jsonText = response.body;
 
   var listJsonItems = jsonDecode(jsonText) as List;
